@@ -1,0 +1,253 @@
+/*starts with header property*/
+header
+{
+	display: flex;
+	background-color: aqua;
+	padding: 0 0 10px 0;
+	align-items: center;
+	justify-content: center;
+	color: black;
+	transition: background-color 2s, color 2s;
+}
+header:hover
+{
+	background-color: dodgerblue;
+	color: white;
+}
+/* above header property & below image property */
+.image
+{
+	width: 8vw;
+	margin: 1vw 2vw 0 0;
+}
+.image img
+{
+	max-width: 100%;
+	border-radius: 10%;
+	transition: border-radius 1s;
+}
+.image img:hover
+{
+	border-radius: 50%;
+}
+/* above image property & below title property*/
+.title
+{
+	width: 80%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2vw;
+	font-family: "droid serif";
+}
+.title h1
+{
+	margin: 0;
+}
+.title h1 hr
+{
+	margin: 5px 0 5px 50%;
+	width: 0;
+	visibility: hidden;
+	color: white;
+	transform: translate(-50%, 0);
+	transition: width 2s, visibility 2s;
+}
+h1:hover hr
+{
+	width: 100%;
+	visibility: visible;
+}
+.square
+{
+	height: 40px;
+	width: 40px;
+	border-radius: 550%;
+	border-top: 5px solid red;
+	border-right: 5px solid transparent;
+	position: relative;
+	margin: 50px;
+	transform: rotate(45deg);
+}
+.square::before
+{
+	content: "";
+	border-width: 10px;
+	border-style: solid;
+	position: absolute;
+	border-color: red transparent transparent transparent;
+	right: -12px;
+	bottom: 20px;
+	transform: rotate(-45deg);
+}
+.star
+{
+	width: 0;
+	height: 0;
+	position: relative;
+	border-bottom: 50px solid red;
+	border-right: 25px solid transparent;
+	border-left: 25px solid transparent;
+	/* border-width: 0 25px 50px 25px;
+	border-style: solid;
+	border-color: transparent transparent red transparent; */
+}
+.star::after
+{
+	content: "";
+	border-top: 50px solid red;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	position: absolute;
+	top: 18px;
+	left: -25px;
+}
+.heart
+{
+	width: 0;
+	height: 50px;
+	border: 50px solid red;
+	border-radius: 50px 50px 0 0;
+	margin-left: 500px;
+	position: relative;
+	transform: rotate(-45deg);
+}
+.heart:after
+{
+	content: "";
+	height: 50px;
+	border: 50px solid red;
+	border-radius: 50px 50px 0 0;
+	position: absolute;
+	top: -25px;
+	left: -25px;
+	transform: rotate(90deg);
+}
+.yin-yang
+{
+	width: 500px;
+	height: 250px;
+	background-color: red;
+	margin-left: 50%;
+	border-color: yellow;
+	border-style: solid;
+	border-width: 0 0 250px 0;
+	transform: translate(-50%, 0), rotateZ(0deg);
+	border-radius: 50%;
+	position: relative;
+	animation-name: yin-yang-rotate;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.yin-yang:hover
+{
+	animation-play-state: paused;
+}
+@keyframes yin-yang-rotate
+{
+	from
+	{
+		transform: translate(-50%, 0) rotateZ(0deg);
+	}
+	to
+	{
+		transform: translate(-50%, 0) rotateZ(360deg);
+	}
+}
+.yin-yang::before
+{
+	content: "";
+	width: 50px;
+	height: 50px;
+	border: 100px solid yellow;
+	border-radius: 50%;
+	background-color: red;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	transform: translate(0, -50%);
+}
+.yin-yang::after
+{
+	content: "";
+	height: 50px;
+	width: 50px;
+	border: 100px solid red;
+	background-color: yellow;
+	border-radius: 100%;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	transform: translate(0, -50%);
+}
+.box
+{
+	width: 1000px;
+	height: 600px;
+	border: 5px solid red;
+	margin: 10px auto;
+	perspective: 2800px;
+	font-size: 100px;
+}
+.bottom
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 400px;
+	background-color: rgba(255, 0, 0, 0.5);
+	margin: 10px auto;
+	transform: rotateX(45deg);
+	transform-style: preserve-3d;
+	position: relative;
+	transition: transform 5s;
+	/* animation: box-rotate;
+	animation-duration: 5s;
+	animation-iteration-count: infinite; */
+}
+.bottom:hover
+{
+	transform: rotateX(0deg);
+}
+/* @keyframes box-rotate
+{
+	from
+	{
+		transform: rotate3d(1, 1, 1, 0deg);
+	}
+	to
+	{
+		transform: rotate3d(1, 1, 1, 360deg);
+	}
+} */
+.bottom::after
+{
+	content: "Right";
+	width: 400px;
+	height: 400px;
+	background-color: rgba(255, 0, 0, 1);
+	position: absolute;
+	left: 0;
+	top: 0;
+	/* transform: rotateY(0deg); */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: threeD;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	
+}
+@keyframes threeD
+{
+	from
+	{
+		transform: rotateY(0deg);
+	}
+	to
+	{
+		transform: rotateY(360deg);
+	}
+}
