@@ -7,12 +7,14 @@ header
 	align-items: center;
 	justify-content: center;
 	color: black;
-	transition: background-color 2s, color 2s;
+	letter-spacing: 0;
+	transition: background-color 2s, color 2s, letter-spacing 2s;
 }
 header:hover
 {
 	background-color: dodgerblue;
 	color: white;
+	letter-spacing: 35px;
 }
 /* above header property & below image property */
 .image
@@ -53,7 +55,7 @@ header:hover
 	transform: translate(-50%, 0);
 	transition: width 2s, visibility 2s;
 }
-h1:hover hr
+header:hover hr
 {
 	width: 100%;
 	visibility: visible;
