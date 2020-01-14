@@ -1,22 +1,29 @@
+@font-face
+{
+	font-family: open-sans;
+	src: url(fonts/OpenSans-Regular.ttf);
+}
 /*starts with header property*/
 header
 {
 	display: flex;
-	background-color: aqua;
+	background-color: dodgerblue;
 	padding: 0 0 10px 0;
 	align-items: center;
 	justify-content: center;
-	color: black;
+	color: white;
 	letter-spacing: 0;
-	transition: background-color 2s, color 2s, letter-spacing 2s;
+	text-shadow: none;
+	transition: background-color 2s, color 2s, letter-spacing 2s, text-shadow 2s;
 }
 header:hover
 {
-	background-color: dodgerblue;
-	color: white;
+	background-color: hsl(0, 0%, 30%);
 	letter-spacing: 35px;
+	text-shadow: 2px 2px 5px white;
 }
-/* above header property & below image property */
+/* above:: header property
+below:: image property */
 .image
 {
 	width: 8vw;
@@ -32,7 +39,8 @@ header:hover
 {
 	border-radius: 50%;
 }
-/* above image property & below title property*/
+/* above:: image property
+below:: title property*/
 .title
 {
 	width: 80%;
@@ -40,7 +48,7 @@ header:hover
 	align-items: center;
 	justify-content: center;
 	font-size: 2vw;
-	font-family: "droid serif";
+	font-family: open-sans;
 }
 .title h1
 {
@@ -60,3 +68,74 @@ header:hover hr
 	width: 100%;
 	visibility: visible;
 }
+/* above:: end of header
+below:: start of navigation bar */
+nav
+{
+	background-color: hsl(0, 0%, 90%);
+	transition: box-shadow 0.5s;
+	position: relative;
+	font-family: open-sans;
+}
+nav:hover
+{
+	box-shadow: 3px 3px 5px 1px grey;
+}
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+li:hover
+{
+	background-color: black;
+}
+a
+{
+	text-decoration: none;
+	padding: 10px;
+	display: block;
+}
+.main-nav-container
+{
+	display: flex;
+}
+.main-nav-content
+{
+	border-radius: 5px;
+}
+.main-nav-content a
+{
+	color: black;
+}
+.main-nav-content:hover a
+{
+	color: white;
+}
+.sub-nav1-container
+{
+	display: block;
+	position: absolute;
+	border-radius: 0 0 15px 15px;
+	top: -100%;
+	z-index: -1;
+	overflow: hidden;
+	transition: top 0.5s;
+}
+.sub-nav1-content
+{
+	background-color: grey;
+	width: 200px;
+}
+.sub-nav1:hover .sub-nav1-container /*hover effect */
+{
+	display: block;
+	box-shadow: 1px 3px 5px 1px black;
+	top: 100%;
+}
+.down-triangle
+{
+	font-size: 10px;
+}
+/*above:: end of navigation bar*/
