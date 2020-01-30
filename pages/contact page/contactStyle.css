@@ -1,0 +1,110 @@
+header
+{
+	display: flex;
+	background-color: red;
+	padding: 0 0 10px 0;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	letter-spacing: 0;
+	text-shadow: none;
+	transition: color 2s, letter-spacing 2s, text-shadow 2s;
+}
+header:hover
+{
+	letter-spacing: 35px;
+	text-shadow: 2px 2px 5px white;
+}
+/* above:: header property
+below:: image property */
+.image
+{
+	width: 30%;
+	height: 9vw;
+	margin: 1vw 2vw 0 0;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.image img
+{
+	width: 10vw;
+	padding: 5px;
+}
+/* above:: image property
+below:: title property*/
+.title
+{
+	width: 70%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2vw;
+	font-family: open-sans;
+}
+.title h1
+{
+	margin: 0;
+}
+.title h1 hr
+{
+	margin: 5px 0 5px 50%;
+	width: 0;
+	visibility: hidden;
+	color: white;
+	opacity: 0.2;
+	transform: translate(-50%, 0);
+	transition: width 2s, visibility 2s, opacity 1s;
+}
+header:hover hr
+{
+	width: 100%;
+	visibility: visible;
+	opacity: 1;
+}
+/* above:: end of header
+below:: start of navigation bar */
+nav
+{
+	background-color: hsl(0, 0%, 90%);
+	transition: box-shadow 0.5s;
+	position: relative;
+	font-family: open-sans;
+}
+nav:hover
+{
+	box-shadow: 3px 3px 5px 1px grey;
+}
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+li:hover
+{
+	background-color: black;
+}
+a
+{
+	text-decoration: none;
+	padding: 10px;
+	display: block;
+}
+.main-nav-container
+{
+	display: flex;
+}
+.main-nav-content
+{
+	border-radius: 5px;
+}
+.main-nav-content a
+{
+	color: black;
+}
+.main-nav-content:hover a
+{
+	color: white;
+}

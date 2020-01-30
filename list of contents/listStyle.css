@@ -1,0 +1,67 @@
+body
+{
+    background-color: dodgerblue;
+	font-family: "open sans";
+}
+a
+{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 10px;
+	margin: 5px;
+	background-color: powderblue;
+}
+a:hover
+{
+	background-color: black;
+	color: white;
+}
+#header
+{
+    display: flex;
+}
+.listButton
+{
+	width: 200px;
+	border-radius: 30px;
+	border: none;
+	font-size: 20px;
+	padding: 10px;
+	margin: 5px;
+	cursor: pointer;
+}
+.listButton:hover
+{
+	background-color: black;
+	color: white;
+}
+#listGames
+{
+	display: none;
+}
+#listGames::before
+{
+	content: "";
+	border: 10px;
+	border-style: solid;
+	border-color: white transparent transparent;
+	position: absolute;
+	top: 56px;
+	right: 30px;
+}
+#listApps
+{
+	display: block;
+}
+#listApps::before
+{
+	content: "";
+	border: 10px;
+	border-style: solid;
+	border-color: white transparent transparent;
+	position: absolute;
+	top: 56px;
+	left: 30px;
+}

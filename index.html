@@ -8,6 +8,17 @@
 		<meta name="description" content="this is my playground"/>
 		<meta name="keywords" content="html, css, javascript, playground"/>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<style>
+			@font-face
+			{
+				font-family: open-sans;
+				src: url(fonts/OpenSans-Regular.ttf);
+			}
+			body
+			{
+				position: relative;
+			}
+		</style>
 	</head>
 	<body>
 		<header>
@@ -20,24 +31,21 @@
 		</header>
 		<nav>
 			<ul class="main-nav-container">
-				<li class="main-nav-content"><a href="#">Home</a></li>
-				<li class="main-nav-content sub-nav1"><a href="#">Catagory
-				<span class="down-triangle">&#9660;</span></a>
-					<ul class="sub-nav1-container">
-						<li class="sub-nav1-content"><a href="#">HTML</a></li>
-						<li class="sub-nav1-content"><a href="#">CSS</a></li>
-					</ul>
-				</li>
-				<li class="main-nav-content sub-nav1"><a href="#">Examples 
-				<span class="down-triangle">&#9660;</span></a>
-					<ul class="sub-nav1-container">
-						<li class="sub-nav1-content"><a href="#">HTML examples</a></li>
-						<li class="sub-nav1-content"><a href="#">CSS examples</a></li>
-					</ul>
-				</li>
-				<li class="main-nav-content"><a href="#">About</a></li>
-				<li class="main-nav-content"><a href="#">Contact</a></li>
+				<li class="main-nav-content"><a href="index.html">Home</a></li>
+				<li class="main-nav-content"><a href="pages/about%20page/about.html">About</a></li>
+				<li class="main-nav-content"><a href="pages/contact%20page/contact.html">Contact</a></li>
 			</ul>
 		</nav>
+		<main>
+			<section id="mainContent">
+				<iframe name="main-iframe" src="pages/main-iframe.html"></iframe>
+			</section>
+			<aside id="listOfContent">
+				<iframe name= "list-iframe" src="list%20of%20contents/list.html"></iframe>
+			</aside>
+		</main>
+		<!--Above navigation bar-->
+
+		<script src="script.js"></script>
 	</body>
 </html>

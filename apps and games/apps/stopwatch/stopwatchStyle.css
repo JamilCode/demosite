@@ -1,0 +1,47 @@
+#stopwatch
+{
+	background-color: grey;
+	margin: 10px 50%;
+	transform: translate(-50%, 0);
+	position: absolute;
+	width: 380px;
+	height: 95%;
+	text-align: center;
+	border-radius: 5px;
+	font-family: open-sans;
+}
+#display
+{
+	background-color: hsl(0, 0%, 20%);
+	color: white;
+	margin: 5px;
+	font-size: 4vw;
+	padding: 5px 20px;
+}
+.swbutton
+{
+	font-size: 2vw;
+	padding: 10px;
+	margin: 0 5px;
+	width: 10vw;
+	border: 0;
+	border-radius: 50px;
+}
+.swbutton:hover
+{
+	color: white;
+	background-color: black;
+}
+#info
+{
+	height: 350px;
+	background-color: black;
+	margin: 5px;
+	overflow: auto;
+}
+#lapsDisplay
+{
+	font-size: 3vw;
+	color: white;
+	margin: 0;
+}
